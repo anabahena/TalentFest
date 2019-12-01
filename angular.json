@@ -118,8 +118,13 @@
               "devServerTarget": "reto-Banorte:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "reto-Banorte"
 }
