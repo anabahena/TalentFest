@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { HomeModule } from './components/pages/home/home.module';
+// import { HomeModule } from './components/pages/home/home.module';
 // import {HomeComponent} from './components/pages/home/home.component'
-  import { from } from 'rxjs';
+// import { from } from 'rxjs';
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
 // Firebase
 import { AngularFireModule } from '@angular/fire';
@@ -15,7 +15,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 // import { ClientsModule } from './components/pages/clients/clients.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { ContainerAppComponent } from './components/pages/container-app/container-app.component'
+import { ContainerAppComponent } from './components/pages/container-app/container-app.component';
+import {isBoolean} from 'util';
 
 
 @NgModule({
@@ -24,7 +25,6 @@ import { ContainerAppComponent } from './components/pages/container-app/containe
     // HomeComponent,
     ToolbarComponent,
     ContainerAppComponent,
-    
   ],
   imports: [
     BrowserModule,
