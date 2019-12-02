@@ -15,12 +15,14 @@ export class LoginService {
     this.userData = afsAuth.authState;
    }
 
+  //  Inicio de sesión con email
   loginEmail(user:UserI){
     const {email, password} = user;
     return this.afsAuth.auth.signInWithEmailAndPassword(email,password)
     
   }
 
+// Cerrar sesión
   logout(){
     this.afsAuth.auth.signOut();
   }

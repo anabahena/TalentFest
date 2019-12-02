@@ -1,7 +1,7 @@
 <div class="container">
 
     <!-- {{clients$ | async | json}} -->
-    <!-- <table class="table client-table">
+    <table class="table client-table">
         <thead>
             <tr>
                 <th scope="col">Id</th>
@@ -13,21 +13,21 @@
             </tr>
         </thead>
         <tbody *ngIf="client$ | async as client; else loading">
-            <tr> -->
-    <!-- <th scope="row">{{client.id}}</th> -->
-    <!-- <td>{{client.nameClient}}</td>
+            <tr>
+                <th scope="row">{{client.id}}</th>
+                <td>{{client.nameClient}}</td>
                 <td>{{client.age}}</td>
                 <td>{{client.state}}</td>
                 <td>{{client.serviceType}}</td>
-                <td>{{client.rating}}</td> -->
-    <!-- </tr>
+                <td>{{client.rating}}</td>
+            </tr>
         </tbody>
     </table>
-</div> -->
+</div>
 
-    <!-- <ng-template #loading>
+<ng-template #loading>
     <div class="text-center spinner">
         <strong>Loading...</strong>
         <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
     </div>
-</ng-template> -->
+</ng-template>

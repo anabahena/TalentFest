@@ -28,13 +28,13 @@ export class LoginComponent implements OnInit {
     this.loginSvc
     .loginEmail(form)
     .then(res =>{
-      alert('Inicio de sesión exitoso')
-      this.route.navigate(['/home'])
+      alert('Inicio de sesión exitoso');
+      this.route.navigate(['/home']);
       
     })
     .catch(err =>{
-      alert('No has ingresado la información correcta')
-      
+      alert('No has ingresado la información correcta');
+      this.route.navigate(['/login'])
     })
   }
 
