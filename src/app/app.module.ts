@@ -16,14 +16,21 @@ import { environment } from 'src/environments/environment';
 // import { ClientsModule } from './components/pages/clients/clients.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { ContainerAppComponent } from './components/pages/container-app/container-app.component'
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import {MatTableDataSource} from '@angular/material/table';
+// import {MatTableModule} from '@angular/material/table';
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatTableModule } from '@angular/material' 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    // HomeComponent,
     ToolbarComponent,
     ContainerAppComponent,
+
     
   ],
   imports: [
@@ -33,7 +40,13 @@ import { ContainerAppComponent } from './components/pages/container-app/containe
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

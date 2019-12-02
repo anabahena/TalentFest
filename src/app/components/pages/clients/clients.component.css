@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.input-filter {
+    border: 2px solid black;
+    width: 20vw;
+}

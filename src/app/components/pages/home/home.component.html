@@ -1,6 +1,10 @@
+<br>
+
+
+
 <div class="container" *ngIf="clients$ | async as clients; else loading">
-    <table class="table client-table">
-        <thead>
+    <table class="table client-table ">
+        <thead class="thead-dark">
             <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Nombre</th>
@@ -8,6 +12,7 @@
                 <th scope="col">Estado</th>
                 <th scope="col">Servicio contratado</th>
                 <th scope="col">Calificación</th>
+                <th scope="col">Antiguedad</th>
             </tr>
         </thead>
         <tbody *ngFor="let client of clients">
@@ -18,6 +23,7 @@
                 <td>{{client.state}}</td>
                 <td>{{client.serviceType}}</td>
                 <td>{{client.rating}}</td>
+                <td>{{client.antiguedad}}</td>
             </tr>
         </tbody>
     </table>
@@ -29,3 +35,6 @@
         <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
     </div>
 </ng-template>
+
+
+<app-clients></app-clients>
