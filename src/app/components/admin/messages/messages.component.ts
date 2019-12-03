@@ -14,8 +14,14 @@ export class MessagesComponent implements OnInit {
 
   ngOnInit() {
     this.messageService.getMessages().subscribe(messages => {
+      console.log(messages)
       this.messages = messages;
       // console.log(messages)      
     })
+  }
+
+  deleteMessage(event, message){
+    this.messageService.deleteMessage(message);
+    console.log(message)
   }
 }
