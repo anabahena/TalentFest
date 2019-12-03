@@ -19,7 +19,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 })
 
 export class ClientsComponent implements OnInit, AfterViewInit {
-  displayedColumns: string[] = ['id', 'nameClient', 'age', 'state','serviceType', 'rating'  ];
+  displayedColumns: string[] = ['id', 'nameClient', 'age', 'state','serviceType', 'rating','check'  ];
   dataSource = new MatTableDataSource();
   selection = new SelectionModel(true, []);
   
