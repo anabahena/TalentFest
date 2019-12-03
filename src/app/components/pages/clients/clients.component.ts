@@ -8,9 +8,9 @@ import {MatTableDataSource} from '@angular/material/table';
 import { MatPaginator } from '@angular/material';
 import {SelectionModel} from '@angular/cdk/collections';
 import { ClientsI } from 'src/app/shared/models/clients.intrface';
-
-
-
+import {LoginService} from '../../auth/login.service';
+import {AngularFireAuth} from '@angular/fire/auth';
+import {UserI} from '../../../shared/models/user.interface'
 
 
 
@@ -58,16 +58,35 @@ export class ClientsComponent implements OnInit, AfterViewInit {
 
 
   
-  // public client$ :Observable <ClientsI>;
+  public client$ :Observable <ClientsI>;
   
 
   
-  constructor(private route:ActivatedRoute, private clientSvc: ClientsService) { }
+  constructor(private route:ActivatedRoute, private clientSvc: ClientsService, private loginSvc:LoginService) { }
+  
+  public isCobranza:any = null;
+  public userUid:any = null;
 
   ngOnInit() {
-    this.clientSvc.getAllClients().subscribe(clients => this.dataSource.data = clients)
+// función que filtra
+    this.clientSvc.getAllClients().subscribe(clients => 
+      this.dataSource.data = clients.filter((item) => item.rating <= 6 )
+      );
+    this.getCurrentUser();
+   
 
+  }
 
+  getCurrentUser() {
+     this.loginSvc.isAuth().subscribe(auth =>{
+      if(auth){
+        this.userUid = auth.uid;
+         this.loginSvc.isAdmin(this.userUid).subscribe(userRole => {
+          this.isCobranza = Object.assign({}, userRole.roles)
+          this.isCobranza = this.isCobranza.hasOwnProperty('cobranza')
+        })
+      }
+    })
   }
   
   ngAfterViewInit(){
@@ -85,7 +104,6 @@ export class ClientsComponent implements OnInit, AfterViewInit {
   // }
 
 
-  
 
 }
 

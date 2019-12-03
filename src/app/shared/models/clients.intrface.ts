@@ -5,6 +5,6 @@ export interface ClientsI{
     state:string,
     serviceType:string,
     antiguedad:number,
-    rating:number
-
+    rating:number,
+    // uid?:string
 }

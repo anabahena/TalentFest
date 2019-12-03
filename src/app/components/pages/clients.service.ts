@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable} from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, filter } from 'rxjs/operators';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { ClientsI} from '../../shared/models/clients.intrface'
+import { ClientsI} from '../../shared/models/clients.intrface';
+
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,9 @@ export class ClientsService {
         )
     );
   }
+  
+
+
 
   
 
