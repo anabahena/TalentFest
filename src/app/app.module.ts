@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { HomeModule } from './components/pages/home/home.module';
 // import {HomeComponent} from './components/pages/home/home.component'
 // import { from } from 'rxjs';
@@ -14,7 +14,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 // import { ClientsModule } from './components/pages/clients/clients.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule } from '@angular/forms';
 
 import { ContainerAppComponent } from './components/pages/container-app/container-app.component';
 import { CommonModule } from '@angular/common';
@@ -34,7 +34,6 @@ import {MatMenuModule} from '@angular/material/menu';
 import {FooterModule} from './shared/components/footer/footer.module';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +42,7 @@ import {FooterModule} from './shared/components/footer/footer.module';
   ],
   imports: [
     BrowserModule,
+    // MaterialModule.forRoot(),
     AppRoutingModule,
     MatMenuModule,
     NgbModule,
@@ -51,7 +51,6 @@ import {FooterModule} from './shared/components/footer/footer.module';
     AngularFireAuthModule,
     ReactiveFormsModule,
     CommonModule,
-    FormsModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
@@ -60,6 +59,7 @@ import {FooterModule} from './shared/components/footer/footer.module';
     MatSortModule,
     MatCheckboxModule,
     MatIconModule,
+    FormsModule,  
     MatButtonModule,
     FooterModule,
   ],
