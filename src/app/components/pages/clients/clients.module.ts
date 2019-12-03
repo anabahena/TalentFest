@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+<<<<<<< HEAD
 
 // import { ClientsRoutingModule } from './clients-routing.module';
 import { ClientsComponent} from './clients.component';
+=======
+import { ClientsRoutingModule } from './clients-routing.module';
+import { ClientsComponent } from './clients.component';
+>>>>>>> 0280c0ceb42f7fd91dd21ddec2ee9d5a7916d627
 // import {MatTableModule} from '@angular/material/table';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 // import {MatTableDataSource} from '@angular/material/table';
