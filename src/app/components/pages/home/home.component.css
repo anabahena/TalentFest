@@ -1,11 +1,17 @@
 .btn {
-  background: #EB0029;
-  border: none;
-  text-align: center;
-  color: #FFFFFF;
-  width: 280%;
-  height: 268%;
-  margin: 2%;
-  font-size: 30px;
+    background: #EB0029;
+    border: none;
+    text-align: center;
+    color: #FFFFFF;
+    width: 400px;
+    height: 100px;
+    margin: 2%;
+    font-size: 30px;
+}
 
+div {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
