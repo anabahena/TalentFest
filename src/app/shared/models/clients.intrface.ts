@@ -13,6 +13,7 @@ export interface ClientsI{
     antiguedad:number,
     rating:number,
     uid?:string,
-    roles:Roles
+    roles:Roles,
+    moroso:boolean
 }
 

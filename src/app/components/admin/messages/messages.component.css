@@ -1,5 +1,5 @@
 div {
-    width: 100vw;
+    width: 70vw;
     margin: 0;
     padding: 0;
 }
@@ -12,6 +12,25 @@ div ul li button {
     background: red;
 }
 
-div[_ngcontent-pbx-c5] ul[_ngcontent-pbx-c5] li[_ngcontent-pbx-c5] {
-    color: green;
+.table-msg {
+    width: 60vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    border: 1px solid red;
+    text-align: justify;
+}
+
+.btn-delete {
+    width: 40vw;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.asunto {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.texto {
+    font-size: 1.2rem;
 }

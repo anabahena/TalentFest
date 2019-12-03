@@ -1,13 +1,18 @@
+<br>
 <div *ngIf="messages.length > 0; else nomessages">
-    <ul>
-        <li *ngFor="let m of messages">Mensajes de {{m.area}} <br/> {{m.text}}
-
+    <table>
+        <td *ngFor="let m of messages" class="table-msg">
+            <p class="asunto">Mensajes de {{m.area}}</p><br/>
+            <p class="texto">{{m.text}}</p>
             <button (click)="deleteMessage($event, m)">
                 Eliminar
             </button>
-        </li>
-    </ul>
+        </td>
+
+    </table>
 </div>
+
+<br>
 
 <ng-template #nomessages>
     <p>No hay mensajes disponibles</p>
