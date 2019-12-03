@@ -12,8 +12,8 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class LoginService {
-  public userData:Observable <firebase.User>;
-  constructor(private afsAuth:AngularFireAuth, private afs:AngularFirestore) {
+  public userData: Observable <firebase.User>;
+  constructor(private afsAuth: AngularFireAuth, private afs: AngularFirestore) {
     this.userData = afsAuth.authState;
    }
 
@@ -22,10 +22,10 @@ export class LoginService {
   //  Inicio de sesión con email
   loginEmail(user: UserI){
     const {email, password} = user;
-    return this.afsAuth.auth.signInWithEmailAndPassword(email,password)
+    return this.afsAuth.auth.signInWithEmailAndPassword(email, password)
     .then((credential) =>{
-      this.updateUserData(credential.user)
-    })
+      this.updateUserData(credential.user);
+    });
 
   }
 
@@ -53,6 +53,6 @@ export class LoginService {
         cobranza: true
       }
     };
-    return userRef.set(data, {merge: true})
+    return userRef.set(data, {merge: true});
   }
 }

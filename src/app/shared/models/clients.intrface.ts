@@ -5,7 +5,7 @@ export interface Roles {
 }
 
 export interface ClientsI {
-    id: number,
+    id: number;
     nameClient: string;
     age: number;
     state: string;

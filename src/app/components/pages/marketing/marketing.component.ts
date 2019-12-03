@@ -10,23 +10,22 @@ import { ClientsI } from 'src/app/shared/models/clients.intrface';
 import {LoginService} from '../../auth/login.service';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-
-
 @Component({
-  selector: 'app-clients',
-  templateUrl: './clients.component.html',
-  styleUrls: ['./clients.component.css']
+  selector: 'app-marketing',
+  templateUrl: './marketing.component.html',
+  styleUrls: ['./marketing.component.css']
 })
-
-export class ClientsComponent implements OnInit, AfterViewInit {
+export class MarketingComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = ['id', 'nameClient', 'age', 'state','serviceType', 'rating'  ];
   dataSource = new MatTableDataSource();
   selection = new SelectionModel(true, []);
+  
   User: any;
 
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
+ 
   }
 
   /** Whether the number of selected elements matches the total number of rows. */
@@ -56,62 +55,33 @@ export class ClientsComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
-  public client$: Observable <ClientsI>;
 
-  constructor(private route: ActivatedRoute, private clientSvc: ClientsService, private loginSvc:LoginService) {
+  
+  public client$ :Observable <ClientsI>;
+  
+
+
+  
+  constructor(private route:ActivatedRoute, private clientSvc: ClientsService, private loginSvc:LoginService) { 
+    
   }
-
+  
   public isAdmin:any = null;
   public userUid:any = null;
 
   ngOnInit() {
 
-    this.clientSvc.getAllClients().subscribe(clients =>
-      this.dataSource.data = clients
+    this.clientSvc.getAllClients().subscribe(clients => 
+      this.dataSource.data = clients.filter((item) => item.rating > 6)
       );
   }
-
-
-  // this.clientSvc.getAllClients().subscribe(clients =>
-  //   this.dataSource.data = clients.filter((item) => item.rating <= 6 )
-
-
-  // getCurrentUser() {
-  //    this.loginSvc.isAuth().subscribe(auth =>{
-  //     if(auth){
-  //       this.userUid = auth.uid;
-  //        this.loginSvc.isAdmin(this.userUid).subscribe(userRole => {
-  //         this.isAdmin = Object.assign({}, userRole.roles)
-  //         this.isAdmin = this.isAdmin.hasOwnProperty('cobranza');
-
-  //       });
-  //     }else{
-
-  //     }
-  //   })
-  // }
-
+  
 
   ngAfterViewInit(){
-    this.dataSource.paginator= this.paginator;
+    this.dataSource.paginator=this.paginator;
     this.dataSource.sort = this.sort;
   }
-
-  // onEditClient(client:ClientsI){
-  //   console.log('Se ha editado', client);
-
-  // }
-
-  // onDeleteClient(client:ClientsI){
-  //   console.log('Se ha eliminado el dato', client);
-  // }
 
 
 
 }
-
-
-
-
-
-

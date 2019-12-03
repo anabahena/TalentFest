@@ -13,13 +13,13 @@ div ul li button {
 }
 table {
   background: #F5F5F5;
-  display: flex;
+  /*display: flex;*/
   justify-content: center;
 }
 .table-msg {
-    width: 60vw;
+    width: 70vw;
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+    font-size: 14px;
     border: 1px solid #4E4044;
     text-align: justify;
 }
@@ -32,14 +32,15 @@ table {
 
 .asunto {
     /*font-weight: bold;*/
-    font-size: 1.4rem;
+    font-size: 14px;
     border-bottom: 1px solid #4E4044;
     color: #4E4044;
     text-align: center;
+    display: flex;
 }
 
 .texto {
-    font-size: 1.2rem;
+    font-size: 14px;
     text-align: justify;
     padding: 2%;
 }
@@ -48,3 +49,20 @@ table {
 /*table {*/
 /*  width: 100%;*/
 /*}*/
+
+
+.btn {
+  background: #7F7F7F;
+  color: white;
+  border: none;
+}
+
+.btn2 {
+  background: red;
+  color: white;
+  border: none;
+}
+
+h1 {
+  text-align: center;
+}

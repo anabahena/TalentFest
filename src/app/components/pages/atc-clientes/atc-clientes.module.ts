@@ -1,23 +1,21 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ClientsRoutingModule } from './clients-routing.module';
-import { ClientsComponent } from './clients.component';
-// import {MatTableModule} from '@angular/material/table';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
-// import {MatTableDataSource} from '@angular/material/table';
 import { MatTableModule } from '@angular/material';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-
+import { AtcClientesRoutingModule } from './atc-clientes-routing.module';
+import { AtcClientesComponent } from './atc-clientes.component';
 
 
 @NgModule({
-  declarations: [ClientsComponent],
+  declarations: [AtcClientesComponent],
   imports: [
     CommonModule,
-    ClientsRoutingModule,
+    AtcClientesRoutingModule,
+    CommonModule,
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
@@ -28,5 +26,4 @@ import { FormsModule } from '@angular/forms';
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class ClientsModule {
- }
+export class AtcClientesModule { }
