@@ -81,6 +81,8 @@ export class ClientsComponent implements OnInit, AfterViewInit {
       );
   }
 
+
+
   // getCurrentUser() {
   //    this.loginSvc.isAuth().subscribe(auth =>{
   //     if(auth){
@@ -96,6 +98,7 @@ export class ClientsComponent implements OnInit, AfterViewInit {
   //   })
   // }
   
+
   ngAfterViewInit(){
     this.dataSource.paginator=this.paginator;
     this.dataSource.sort = this.sort;
@@ -103,7 +106,7 @@ export class ClientsComponent implements OnInit, AfterViewInit {
 
   // onEditClient(client:ClientsI){
   //   console.log('Se ha editado', client);
-    
+
   // }
 
   // onDeleteClient(client:ClientsI){
