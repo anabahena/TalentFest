@@ -1,29 +1,16 @@
 <br>
 <div *ngIf="messages.length > 0; else nomessages">
     <table *ngFor="let m of messages">
-
-      <td  class="table-msg">
-        <p class="asunto">Nombre</p>
-      </td>
-      <td  class="table-msg">
-        <p class="asunto">Campaña</p>
-      </td>
-      <td class="table-msg">
-        <p class="asunto">Mensajes de {{m.area}}</p><br/>
-        <p class="texto">{{m.text}}</p>
-        <button (click)="deleteMessage($event, m)">
-          Eliminar
-        </button>
-      </td >
-      <td  class="table-msg">
-        <p class="asunto">Tipo</p>
-      </td>
-      <td  class="table-msg">
-        <p class="asunto">No. Envío</p>
-      </td>
-      <td  class="table-msg">
-        <input type="checkbox">
-      </td>
+        <td  class="table-msg">
+          <p class="asunto">Campaña</p>
+        </td>
+        <td class="table-msg">
+          <p class="asunto">Mensajes de {{m.area}}</p><br/>
+          <p class="texto">{{m.text}}</p>
+          <button (click)="deleteMessage($event, m)">
+            Eliminar
+          </button>
+        </td >
     </table>
 </div>
 

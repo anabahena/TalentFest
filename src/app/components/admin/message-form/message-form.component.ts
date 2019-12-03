@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 
 // Importar el servicio
-import { MessageService } from '../../../services/message.service'
-import { Message } from '../../../shared/models/message'
+import { MessageService } from '../../../services/message.service';
+import { Message } from '../../../shared/models/message';
 
 @Component({
   selector: 'app-message-form',
@@ -20,8 +20,8 @@ export class MessageFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  addMessage(){
-    console.log("hola")
+  addMessage() {
+    console.log('hola');
     // console.log(this.message);
   }
 

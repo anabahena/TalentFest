@@ -20,7 +20,7 @@ export class MessagesComponent implements OnInit {
     });
   }
 
-  deleteMessage(event, message){
+  deleteMessage(event, message) {
     this.messageService.deleteMessage(message);
     // console.log(message)
   }

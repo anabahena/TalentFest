@@ -34,6 +34,7 @@ import {isBoolean} from 'util';
 import {MatMenuModule} from '@angular/material/menu';
 import {FooterModule} from './shared/components/footer/footer.module';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MessagesComponent} from './components/admin/messages/messages.component';
 
 
 
@@ -42,6 +43,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     AppComponent,
     ToolbarComponent,
     ContainerAppComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,6 @@ import {MatGridListModule} from '@angular/material/grid-list';
     CommonModule,
     FormsModule,
     FlexLayoutModule,
-
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
