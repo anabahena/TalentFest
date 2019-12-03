@@ -19,17 +19,53 @@
 
 .formContainer {
   width: 100vw;
-  display: flex;
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  /*box-sizing: border-box;*/
   flex-direction: row;
   box-sizing: border-box;
-  place-content: space-evenly!important;
+  place-content: center;
   align-items: center;
+  text-align: center;
+  display: grid!important;
 
+}
+
+.formContainer h1{
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 50px;
+  line-height: 0;
+  letter-spacing: 2px;
+  padding-top: 33%;
 }
 
 
 .form {
-  display: flex;
-  place-content: space-evenly;
+  /*display: flex;*/
   align-items: center;
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  margin-right: 5%;
+  width: 80%;
+  padding: 0;
+  margin-left: 0;
+  padding-top: 10%;
+}
+
+
+.btn-primary {
+  width: 120%;
+  background: #7F7F7F;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0;
+}
+
+.form-control {
+  width: 120%;
+  border: none;
+  border-radius: 0;
 }

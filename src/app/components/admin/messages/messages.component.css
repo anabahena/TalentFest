@@ -11,12 +11,16 @@ div ul li {
 div ul li button {
     background: red;
 }
-
+table {
+  background: #F5F5F5;
+  display: flex;
+  justify-content: center;
+}
 .table-msg {
     width: 60vw;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    border: 1px solid red;
+    border: 1px solid #4E4044;
     text-align: justify;
 }
 
@@ -27,10 +31,20 @@ div ul li button {
 }
 
 .asunto {
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-size: 1.4rem;
+    border-bottom: 1px solid #4E4044;
+    color: #4E4044;
+    text-align: center;
 }
 
 .texto {
     font-size: 1.2rem;
+    text-align: justify;
+    padding: 2%;
 }
+
+
+/*table {*/
+/*  width: 100%;*/
+/*}*/

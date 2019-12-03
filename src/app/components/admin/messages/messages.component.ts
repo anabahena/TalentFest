@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 // importando el servicio
 import { MessageService } from '../../../services/message.service';
 
-
 @Component({
   selector: 'app-messages',
   templateUrl: './messages.component.html',
@@ -19,8 +18,8 @@ export class MessagesComponent implements OnInit {
     this.messageService.getMessages().subscribe(messages => {
       // console.log(messages)
       this.messages = messages;
-      // console.log(messages)      
-    })
+      // console.log(messages)
+    });
   }
 
   deleteMessage(event, message){
