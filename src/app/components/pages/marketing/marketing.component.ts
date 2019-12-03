@@ -75,26 +75,6 @@ export class MarketingComponent implements OnInit, AfterViewInit {
       this.dataSource.data = clients.filter((item) => item.rating > 6)
       );
   }
-
-
-  // this.clientSvc.getAllClients().subscribe(clients => 
-  //   this.dataSource.data = clients.filter((item) => item.rating <= 6 )
-
-
-  // getCurrentUser() {
-  //    this.loginSvc.isAuth().subscribe(auth =>{
-  //     if(auth){
-  //       this.userUid = auth.uid;
-  //        this.loginSvc.isAdmin(this.userUid).subscribe(userRole => {
-  //         this.isAdmin = Object.assign({}, userRole.roles)
-  //         this.isAdmin = this.isAdmin.hasOwnProperty('cobranza');
-
-  //       });
-  //     }else{
-        
-  //     }
-  //   })
-  // }
   
 
   ngAfterViewInit(){

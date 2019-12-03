@@ -73,7 +73,7 @@ export class CobranzaComponent implements OnInit {
   ngOnInit() {
 
     this.clientSvc.getAllClients().subscribe(clients => 
-      this.dataSource.data =clients.filter((item) => item.moroso == true)
+      this.dataSource.data =clients.filter((item) => item.Moroso ===true)
       );
       
   }
