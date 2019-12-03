@@ -16,12 +16,13 @@
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 100%;
   line-height: 24px;
   display: flex;
   align-items: flex-end;
   text-indent: 2px;
   color: #FFFFFF;
+  text-align: center;
 }
 .navbar-expand-lg .navbar-nav{
   justify-content: space-between;
@@ -34,4 +35,13 @@
 
 .logoHeader {
   height: 39px;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-expand-lg  a {
+    font-size: 80%;
+  }
+
+
 }
