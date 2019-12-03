@@ -16,20 +16,22 @@ import { environment } from 'src/environments/environment';
 // import { ClientsModule } from './components/pages/clients/clients.component';
 import {ReactiveFormsModule } from '@angular/forms';
 
-import { ContainerAppComponent } from './components/pages/container-app/container-app.component'
+import { ContainerAppComponent } from './components/pages/container-app/container-app.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import {MatTableDataSource} from '@angular/material/table';
 // import {MatTableModule} from '@angular/material/table';
-import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import {MatButtonModule, MatFormFieldModule, MatInputModule} from '@angular/material';
 import { MatTableModule } from '@angular/material';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatSortModule} from '@angular/material/'
+import {MatSortModule} from '@angular/material/';
 // import {SelectionModel} from '@angular/cdk/collections';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatIconModule} from '@angular/material/icon';
 import {isBoolean} from 'util';
+import {MatMenuModule} from '@angular/material/menu';
+import {FooterModule} from './shared/components/footer/footer.module';
 
 
 @NgModule({
@@ -42,6 +44,7 @@ import {isBoolean} from 'util';
     BrowserModule,
     // MaterialModule.forRoot(),
     AppRoutingModule,
+    MatMenuModule,
     NgbModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
@@ -57,6 +60,8 @@ import {isBoolean} from 'util';
     MatCheckboxModule,
     MatIconModule,
     FormsModule,  
+    MatButtonModule,
+    FooterModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

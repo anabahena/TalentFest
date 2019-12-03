@@ -8,7 +8,9 @@ import {MatTableDataSource} from '@angular/material/table';
 import { MatPaginator } from '@angular/material';
 import {SelectionModel} from '@angular/cdk/collections';
 import { ClientsI } from 'src/app/shared/models/clients.intrface';
-
+import {LoginService} from '../../auth/login.service';
+// import {AngularFireAuth} from '@angular/fire/auth';
+// import {UserI} from '../../../shared/models/user.interface'
 
 
 
@@ -24,9 +26,11 @@ export class ClientsComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = ['id', 'nameClient', 'age', 'state','serviceType', 'rating'  ];
   dataSource = new MatTableDataSource();
   selection = new SelectionModel(true, []);
+  User: any;
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
+ 
   }
 
   /** Whether the number of selected elements matches the total number of rows. */
@@ -58,18 +62,43 @@ export class ClientsComponent implements OnInit, AfterViewInit {
 
 
   
-  // public client$ :Observable <ClientsI>;
+  public client$ :Observable <ClientsI>;
   
 
+
   
-  constructor(private route:ActivatedRoute, private clientSvc: ClientsService) { }
-
-  ngOnInit() {
-    this.clientSvc.getAllClients().subscribe(clients => this.dataSource.data = clients)
-
-
+  constructor(private route:ActivatedRoute, private clientSvc: ClientsService, private loginSvc:LoginService) { 
+    
   }
   
+  public isAdmin:any = null;
+  public userUid:any = null;
+
+  ngOnInit() {
+
+    this.clientSvc.getAllClients().subscribe(clients => 
+      this.dataSource.data = clients.filter((item) => item.rating <= 6 )
+      );
+  }
+
+
+
+  // getCurrentUser() {
+  //    this.loginSvc.isAuth().subscribe(auth =>{
+  //     if(auth){
+  //       this.userUid = auth.uid;
+  //        this.loginSvc.isAdmin(this.userUid).subscribe(userRole => {
+  //         this.isAdmin = Object.assign({}, userRole.roles)
+  //         this.isAdmin = this.isAdmin.hasOwnProperty('cobranza');
+
+  //       });
+  //     }else{
+        
+  //     }
+  //   })
+  // }
+  
+
   ngAfterViewInit(){
     this.dataSource.paginator=this.paginator;
     this.dataSource.sort = this.sort;
@@ -77,7 +106,7 @@ export class ClientsComponent implements OnInit, AfterViewInit {
 
   // onEditClient(client:ClientsI){
   //   console.log('Se ha editado', client);
-    
+
   // }
 
   // onDeleteClient(client:ClientsI){
@@ -85,7 +114,6 @@ export class ClientsComponent implements OnInit, AfterViewInit {
   // }
 
 
-  
 
 }
 

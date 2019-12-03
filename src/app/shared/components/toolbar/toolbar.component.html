@@ -1,31 +1,60 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-light">
+<nav class="navbar navbar-expand-lg navbar-expand-sm  ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: space-around;">
+        <ul class="navbar-nav mr-auto" style="display: contents">
             <li class="nav-item">
-                <a class="nav-link" routerLink="/login" routerLinkActivate='active'>Login </a>
+                <a class="nav-link" routerLink="/login" routerLinkActivate='active'><img src="assets/img/logoHeader.png" alt="Logotipo" class="logoHeader"></a>
             </li>
+            <!-- <li class="nav-item active">
+            <a class="nav-link" routerLink="/home" routerLinkActivate='active' *ngIf="loginSvc.userData | async">CENTRO DE ENVÍO</a>
+          </li> -->
             <li class="nav-item active">
-                <a class="nav-link" routerLink="/home" routerLinkActivate='active' *ngIf="loginSvc.userData | async">Inicio</a>
+                <!-- <a class="nav-link" routerLink="/clients" routerLinkActivate='active' *ngIf="loginSvc.userData | async">PANEL DE CONTROL</a> -->
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" routerLink="/admin" routerLinkActivate='active' *ngIf="loginSvc.userData | async">ESTADÍSTICAS</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/admin" routerLinkActivate='active' *ngIf="loginSvc.userData | async">MENSAJES (ATENCIÓN A CLIENTES)</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/admin" routerLinkActivate='active' *ngIf="loginSvc.userData | async">Mensajes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/clients" routerLinkActivate='active' *ngIf="loginSvc.userData | async">clientes</a>
+                <a class="nav-link" routerLink="/clients" routerLinkActivate='active' *ngIf="loginSvc.userData | async">CLIENTES</a>
             </li>
             <li>
-                <a class="nav-link d-flex justify-content-center" *ngIf="loginSvc.userData | async; showLogin" (click)="onLogout()" routerLink="/login" routerLinkActivate='active'>Cerrar Sesión</a>
+                <a class="nav-link d-flex justify-content-center" *ngIf="loginSvc.userData | async; showLogin" (click)="onLogout()" routerLink="/login" routerLinkActivate='active'>CERRAR SESIÓN</a>
             </li>
-
-
 
         </ul>
 
     </div>
 </nav>
 
-<!-- <ng-content></ng-content> -->
+<!-- <ng-content></ng-content>-->
+
+<!--<button mat-button [matMenuTriggerFor]="aboveMenu">Above</button>-->
+<!--<mat-menu #aboveMenu="matMenu" yPosition="above">-->
+<!--  <button mat-menu-item>Item 1</button>-->
+<!--  <button mat-menu-item>Item 2</button>-->
+<!--</mat-menu>-->
+
+<!--<button mat-button [matMenuTriggerFor]="belowMenu">Below</button>-->
+<!--<mat-menu #belowMenu="matMenu" yPosition="below">-->
+<!--  <button mat-menu-item>Item 1</button>-->
+<!--  <button mat-menu-item>Item 2</button>-->
+<!--</mat-menu>-->
+
+<!--<button mat-button [matMenuTriggerFor]="beforeMenu">Before</button>-->
+<!--<mat-menu #beforeMenu="matMenu" xPosition="before">-->
+<!--  <button mat-menu-item>Item 1</button>-->
+<!--  <button mat-menu-item>Item 2</button>-->
+<!--</mat-menu>-->
+
+
+<!--<button mat-button [matMenuTriggerFor]="afterMenu">After</button>-->
+<!--<mat-menu #afterMenu="matMenu" xPosition="after">-->
+<!--  <button mat-menu-item>Item 1</button>-->
+<!--  <button mat-menu-item>Item 2</button>-->
+<!--</mat-menu>-->
