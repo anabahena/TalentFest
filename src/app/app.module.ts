@@ -34,7 +34,11 @@ import {isBoolean} from 'util';
 import {MatMenuModule} from '@angular/material/menu';
 import {FooterModule} from './shared/components/footer/footer.module';
 import {MatGridListModule} from '@angular/material/grid-list';
-import {SelectionModel} from '@angular/cdk/collections'
+
+
+
+import {SelectionModel} from '@angular/cdk/collections';
+
 
 
 @NgModule({
@@ -42,6 +46,7 @@ import {SelectionModel} from '@angular/cdk/collections'
     AppComponent,
     ToolbarComponent,
     ContainerAppComponent,
+
   ],
   imports: [
     BrowserModule,

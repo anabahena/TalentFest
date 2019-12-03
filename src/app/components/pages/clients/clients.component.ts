@@ -22,13 +22,11 @@ export class ClientsComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = ['id', 'nameClient', 'age', 'state','serviceType', 'rating','check'  ];
   dataSource = new MatTableDataSource();
   selection = new SelectionModel(true, []);
-  
   User: any;
 
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
- 
   }
 
   /** Whether the number of selected elements matches the total number of rows. */
@@ -58,29 +56,23 @@ export class ClientsComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
+  public client$: Observable <ClientsI>;
 
-  
-  public client$ :Observable <ClientsI>;
-  
-
-
-  
-  constructor(private route:ActivatedRoute, private clientSvc: ClientsService, private loginSvc:LoginService) { 
-    
+  constructor(private route: ActivatedRoute, private clientSvc: ClientsService, private loginSvc:LoginService) {
   }
-  
+
   public isAdmin:any = null;
   public userUid:any = null;
 
   ngOnInit() {
 
-    this.clientSvc.getAllClients().subscribe(clients => 
+    this.clientSvc.getAllClients().subscribe(clients =>
       this.dataSource.data = clients
       );
   }
 
 
-  // this.clientSvc.getAllClients().subscribe(clients => 
+  // this.clientSvc.getAllClients().subscribe(clients =>
   //   this.dataSource.data = clients.filter((item) => item.rating <= 6 )
 
 
@@ -94,14 +86,14 @@ export class ClientsComponent implements OnInit, AfterViewInit {
 
   //       });
   //     }else{
-        
+
   //     }
   //   })
   // }
-  
+
 
   ngAfterViewInit(){
-    this.dataSource.paginator=this.paginator;
+    this.dataSource.paginator= this.paginator;
     this.dataSource.sort = this.sort;
   }
 

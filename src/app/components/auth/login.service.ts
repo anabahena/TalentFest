@@ -12,49 +12,47 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class LoginService {
-  public userData:Observable <firebase.User>;
-  constructor(private afsAuth:AngularFireAuth, private afs:AngularFirestore) {
+  public userData: Observable <firebase.User>;
+  constructor(private afsAuth: AngularFireAuth, private afs: AngularFirestore) {
     this.userData = afsAuth.authState;
    }
 
-  
+
 
   //  Inicio de sesión con email
-  loginEmail(user:UserI){
+  loginEmail(user: UserI){
     const {email, password} = user;
-    return this.afsAuth.auth.signInWithEmailAndPassword(email,password)
+    return this.afsAuth.auth.signInWithEmailAndPassword(email, password)
     .then((credential) =>{
-      this.updateUserData(credential.user)
-    })
-    
+      this.updateUserData(credential.user);
+    });
+
   }
 
 // Cerrar sesión
-  logout(){
+  logout() {
     this.afsAuth.auth.signOut();
   }
 
 
   isAdmin(userUid){
     return this.afs.doc<UserI>(`users/${userUid}`).valueChanges;
-     
   }
 
   isAuth(){
-    return this.afsAuth.authState.pipe(map(auth => auth))
+    return this.afsAuth.authState.pipe(map(auth => auth));
   }
 
   private updateUserData(user){
-    const userRef:AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
     const data: UserI = {
       uid: user.uid,
       email: user.email,
       password: user.password,
-      roles:{
+      roles: {
         cobranza: true
       }
-    }
-    return userRef.set(data, {merge:true})
+    };
+    return userRef.set(data, {merge: true});
   }
-  
 }
