@@ -9,6 +9,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import {FlexModule} from '@angular/flex-layout';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     MatPaginatorModule,
     MatCheckboxModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    FlexModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports:[],

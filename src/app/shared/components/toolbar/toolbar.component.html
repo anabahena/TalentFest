@@ -38,6 +38,7 @@
             <li class="nav-item">
                 <a class="nav-link" routerLink="/cobranza" routerLinkActivate='active' *ngIf="loginSvc.userData | async">CLIENTES (COBRANZA)</a>
             </li>
+
             <li>
                 <a class="nav-link d-flex justify-content-center" *ngIf="loginSvc.userData | async; showLogin" (click)="onLogout()" routerLink="/login" routerLinkActivate='active'>CERRAR SESIÓN</a>
             </li>
