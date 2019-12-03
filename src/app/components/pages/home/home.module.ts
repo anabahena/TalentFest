@@ -26,7 +26,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  exports:[HomeComponent],
+  exports:[],
 })
 export class HomeModule {
  }
