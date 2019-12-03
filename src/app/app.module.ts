@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { HomeModule } from './components/pages/home/home.module';
 // import {HomeComponent} from './components/pages/home/home.component'
 // import { from } from 'rxjs';
@@ -15,7 +15,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 // import { ClientsModule } from './components/pages/clients/clients.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule } from '@angular/forms';
 
 import { ContainerAppComponent } from './components/pages/container-app/container-app.component';
 import { CommonModule } from '@angular/common';
@@ -37,7 +37,6 @@ import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +46,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
   imports: [
     BrowserModule,
     MatGridListModule,
+    // MaterialModule.forRoot(),
     AppRoutingModule,
     MatMenuModule,
     NgbModule,
@@ -57,6 +57,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     CommonModule,
     FormsModule,
     FlexLayoutModule,
+
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
@@ -65,6 +66,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatSortModule,
     MatCheckboxModule,
     MatIconModule,
+    FormsModule,  
     MatButtonModule,
     FooterModule,
   ],
