@@ -1,3 +1,9 @@
+export interface Roles{
+    cobranza:boolean;
+    atenclientes:boolean;
+    marketing:boolean;
+}
+
 export interface ClientsI{
     id:number,
     nameClient:string,
@@ -5,6 +11,8 @@ export interface ClientsI{
     state:string,
     serviceType:string,
     antiguedad:number,
-    rating:number
-
+    rating:number,
+    uid?:string,
+    roles:Roles
 }
+
