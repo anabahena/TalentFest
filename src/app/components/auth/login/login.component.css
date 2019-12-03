@@ -1,0 +1,35 @@
+.homeLogin {
+  background-color: #eb0029;
+  background-repeat: repeat-x;
+  background-image: url("/assets/img/navigation.png");
+  height: 80vh;
+  color: white;
+}
+
+
+.homeFooter {
+  background-color: #eb0029;
+  background-repeat: repeat-x;
+  background-image: url("/assets/img/navigation.png");
+  height: 20vh;
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+
+.formContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  place-content: space-evenly!important;
+  align-items: center;
+
+}
+
+
+.form {
+  display: flex;
+  place-content: space-evenly;
+  align-items: center;
+}
