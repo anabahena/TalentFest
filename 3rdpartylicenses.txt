@@ -23,8 +23,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-<<<<<<< HEAD
-=======
 @angular/animations
 MIT
 
@@ -53,7 +51,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
->>>>>>> 36ada759dca9b9c3d916c72fa2248242f820e287
 @angular/common
 MIT
 
@@ -70,8 +67,6 @@ MIT
 @angular/forms
 MIT
 
-<<<<<<< HEAD
-=======
 @angular/material
 MIT
 The MIT License
@@ -113,7 +108,6 @@ THE SOFTWARE.
 
 @angular/material/tooltip
 
->>>>>>> 36ada759dca9b9c3d916c72fa2248242f820e287
 @angular/platform-browser
 MIT
 
@@ -395,8 +389,6 @@ firebase/auth
 
 firebase/firestore
 
-<<<<<<< HEAD
-=======
 hammerjs
 MIT
 The MIT License (MIT)
@@ -422,7 +414,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
->>>>>>> 36ada759dca9b9c3d916c72fa2248242f820e287
 regenerator-runtime
 MIT
 MIT License
