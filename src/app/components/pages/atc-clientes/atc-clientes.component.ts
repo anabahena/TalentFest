@@ -10,15 +10,13 @@ import { ClientsI } from 'src/app/shared/models/clients.intrface';
 import {LoginService} from '../../auth/login.service';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-
-
 @Component({
-  selector: 'app-clients',
-  templateUrl: './clients.component.html',
-  styleUrls: ['./clients.component.css']
+  selector: 'app-atc-clientes',
+  templateUrl: './atc-clientes.component.html',
+  styleUrls: ['./atc-clientes.component.css']
 })
+export class AtcClientesComponent implements OnInit {
 
-export class ClientsComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = ['id', 'nameClient', 'age', 'state','serviceType', 'rating'  ];
   dataSource = new MatTableDataSource();
   selection = new SelectionModel(true, []);
@@ -75,13 +73,12 @@ export class ClientsComponent implements OnInit, AfterViewInit {
   ngOnInit() {
 
     this.clientSvc.getAllClients().subscribe(clients => 
-      this.dataSource.data = clients
+      this.dataSource.data = clients.filter((item) => item.rating <= 6 )
       );
   }
 
 
-  // this.clientSvc.getAllClients().subscribe(clients => 
-  //   this.dataSource.data = clients.filter((item) => item.rating <= 6 )
+  
 
 
   // getCurrentUser() {
@@ -116,10 +113,5 @@ export class ClientsComponent implements OnInit, AfterViewInit {
 
 
 
+
 }
-
-
-
-
-
-

@@ -18,11 +18,24 @@
                 <a class="nav-link" routerLink="/admin" routerLinkActivate='active' *ngIf="loginSvc.userData | async">ESTADÍSTICAS</a>
             </li> -->
             <li class="nav-item">
+
 <!--                <a class="nav-link" routerLink="/admin" routerLinkActivate='active' *ngIf="loginSvc.userData | async">MENSAJES</a>-->
                 <a class="nav-link" routerLink="/admin" routerLinkActivate='active' *ngIf="loginSvc.userData | async">MENSAJES (ATENCIÓN A CLIENTES)</a>
+
+                <a class="nav-link" routerLink="/admin" routerLinkActivate='active' *ngIf="loginSvc.userData | async">MENSAJES (Marketing)</a>
+
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink="/clients" routerLinkActivate='active' *ngIf="loginSvc.userData | async">CLIENTES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/atcClientes" routerLinkActivate='active' *ngIf="loginSvc.userData | async">CLIENTES (ATC)</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/marketing" routerLinkActivate='active' *ngIf="loginSvc.userData | async">CLIENTES (MARKETING)</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/cobranza" routerLinkActivate='active' *ngIf="loginSvc.userData | async">CLIENTES (COBRANZA)</a>
             </li>
             <li>
                 <a class="nav-link d-flex justify-content-center" *ngIf="loginSvc.userData | async; showLogin" (click)="onLogout()" routerLink="/login" routerLinkActivate='active'>CERRAR SESIÓN</a>

@@ -1,7 +1,5 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ClientsRoutingModule } from './clients-routing.module';
-import { ClientsComponent } from './clients.component';
 // import {MatTableModule} from '@angular/material/table';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 // import {MatTableDataSource} from '@angular/material/table';
@@ -11,13 +9,15 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 
+import { MarketingRoutingModule } from './marketing-routing.module';
+import { MarketingComponent } from './marketing.component';
 
 
 @NgModule({
-  declarations: [ClientsComponent],
+  declarations: [MarketingComponent],
   imports: [
+    MarketingRoutingModule,
     CommonModule,
-    ClientsRoutingModule,
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
@@ -25,8 +25,6 @@ import { FormsModule } from '@angular/forms';
     MatCheckboxModule,
     MatIconModule,
     FormsModule
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  ]
 })
-export class ClientsModule {
- }
+export class MarketingModule { }

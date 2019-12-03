@@ -1,23 +1,20 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ClientsRoutingModule } from './clients-routing.module';
-import { ClientsComponent } from './clients.component';
-// import {MatTableModule} from '@angular/material/table';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
-// import {MatTableDataSource} from '@angular/material/table';
 import { MatTableModule } from '@angular/material';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-
+import { CobranzaRoutingModule } from './cobranza-routing.module';
+import { CobranzaComponent } from './cobranza.component';
 
 
 @NgModule({
-  declarations: [ClientsComponent],
+  declarations: [CobranzaComponent],
   imports: [
     CommonModule,
-    ClientsRoutingModule,
+    CobranzaRoutingModule,
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
@@ -25,8 +22,6 @@ import { FormsModule } from '@angular/forms';
     MatCheckboxModule,
     MatIconModule,
     FormsModule
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  ]
 })
-export class ClientsModule {
- }
+export class CobranzaModule { }

@@ -10,15 +10,13 @@ import { ClientsI } from 'src/app/shared/models/clients.intrface';
 import {LoginService} from '../../auth/login.service';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-
-
 @Component({
-  selector: 'app-clients',
-  templateUrl: './clients.component.html',
-  styleUrls: ['./clients.component.css']
+  selector: 'app-cobranza',
+  templateUrl: './cobranza.component.html',
+  styleUrls: ['./cobranza.component.css']
 })
+export class CobranzaComponent implements OnInit {
 
-export class ClientsComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = ['id', 'nameClient', 'age', 'state','serviceType', 'rating'  ];
   dataSource = new MatTableDataSource();
   selection = new SelectionModel(true, []);
@@ -75,8 +73,9 @@ export class ClientsComponent implements OnInit, AfterViewInit {
   ngOnInit() {
 
     this.clientSvc.getAllClients().subscribe(clients => 
-      this.dataSource.data = clients
+      this.dataSource.data =clients.filter((item) => item.moroso == true)
       );
+      
   }
 
 
@@ -105,21 +104,4 @@ export class ClientsComponent implements OnInit, AfterViewInit {
     this.dataSource.sort = this.sort;
   }
 
-  // onEditClient(client:ClientsI){
-  //   console.log('Se ha editado', client);
-
-  // }
-
-  // onDeleteClient(client:ClientsI){
-  //   console.log('Se ha eliminado el dato', client);
-  // }
-
-
-
 }
-
-
-
-
-
-
