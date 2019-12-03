@@ -1,6 +1,7 @@
 table {
-    width: 65vw;
+    width: 85vw;
     height: 65vh;
+    margin-left: 20%;
     background: white;
     /* color: black; */
     text-align: center;
@@ -16,4 +17,10 @@ th.mat-header-cell {
 h1 {
     font-family: 'Roboto', sans-serif;
     text-align: center;
+    width: 100%;
+}
+
+mat-paginator {
+    width: 100%;
+    margin-left: 20%;
 }
