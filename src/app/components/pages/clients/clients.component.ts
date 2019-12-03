@@ -19,8 +19,9 @@ import { ClientsI } from 'src/app/shared/models/clients.intrface';
   templateUrl: './clients.component.html',
   styleUrls: ['./clients.component.css']
 })
+
 export class ClientsComponent implements OnInit, AfterViewInit {
-  displayedColumns: string[] = ['id', 'nameClient', 'age', 'state','serviceType', 'rating', 'actions',  ];
+  displayedColumns: string[] = ['id', 'nameClient', 'age', 'state','serviceType', 'rating'  ];
   dataSource = new MatTableDataSource();
   selection = new SelectionModel(true, []);
 
@@ -74,7 +75,20 @@ export class ClientsComponent implements OnInit, AfterViewInit {
     this.dataSource.sort = this.sort;
   }
 
+  // onEditClient(client:ClientsI){
+  //   console.log('Se ha editado', client);
+    
+  // }
+
+  // onDeleteClient(client:ClientsI){
+  //   console.log('Se ha eliminado el dato', client);
+  // }
+
+
+  
+
 }
+
 
 
 

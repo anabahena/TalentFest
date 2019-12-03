@@ -8,6 +8,7 @@ import { MatFormFieldModule, MatInputModule, MatSortModule } from '@angular/mate
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatIconModule} from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [HomeComponent, ClientsComponent],
@@ -20,7 +21,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatSortModule,
     MatPaginatorModule,
     MatCheckboxModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   exports:[HomeComponent],
 })

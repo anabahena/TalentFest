@@ -3,7 +3,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { HomeModule } from './components/pages/home/home.module';
+// import { HomeModule } from './components/pages/home/home.module';
 // import {HomeComponent} from './components/pages/home/home.component'
   import { from } from 'rxjs';
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
@@ -52,7 +52,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatPaginatorModule,
     MatSortModule,
     MatCheckboxModule,
-    MatIconModule
+    MatIconModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
