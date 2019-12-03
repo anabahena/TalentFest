@@ -1,29 +1,29 @@
 <br>
+<h1>¡Hola Viridiana!</h1><br>
+<p>Selecciona la campaña del área de marketing que vas a enviar.</p><br>
 <div *ngIf="messages.length > 0; else nomessages">
-    <table *ngFor="let m of messages">
+    <table *ngFor="let m of messages" class="table-msg">
+      <tr>
+        <td style="width: 10%"><p class="asunto">Nombre</p></td>
+        <td style="width: 30%"><p class= "asunto">Mensajes de {{m.area}}</p></td>
+        <td style="width: 10%"><p class="asunto">Campañia</p></td>
+        <td class="texto"><p  class= "asunto">Tipo</p></td>
+        <td class="texto"><p class= "asunto">No. Envío</p></td>
+        <td class="texto"><p class= "asunto">Seleccionar</p> </td>
+      </tr>
 
-      <td  class="table-msg">
-        <p class="asunto">Nombre</p>
-      </td>
-      <td  class="table-msg">
-        <p class="asunto">Campaña</p>
-      </td>
-      <td class="table-msg">
-        <p class="asunto">Mensajes de {{m.area}}</p><br/>
-        <p class="texto">{{m.text}}</p>
-        <button (click)="deleteMessage($event, m)">
-          Eliminar
-        </button>
-      </td >
-      <td  class="table-msg">
-        <p class="asunto">Tipo</p>
-      </td>
-      <td  class="table-msg">
-        <p class="asunto">No. Envío</p>
-      </td>
-      <td  class="table-msg">
-        <input type="checkbox">
-      </td>
+      <tr>
+        <td style="width: 10%"><p class="texto">{{m.nombre}}</p></td>
+        <td style="width: 30%"><p class="texto">{{m.text}}</p>
+          <button class="btn" (click)="deleteMessage($event, m)">
+            Eliminar
+          </button>
+        </td>
+        <td style="width: 10%"><p class="texto">{{m.campania}}</p></td>
+        <td style="width: 10%"><p class="texto">{{m.tipo}}</p></td>
+        <td style="width: 10%"><p class="texto">{{m.envio}}</p></td>
+        <td style="width: 10%" ><input class="texto" type="checkbox"></td>
+      </tr>
     </table>
 </div>
 
@@ -34,4 +34,4 @@
 </ng-template>
 
 
-<button routerLink="/clients" routerLinkActivate='active'>Continuar</button>
+<button class="btn2" routerLink="/clients" routerLinkActivate='active'>Continuar</button>
