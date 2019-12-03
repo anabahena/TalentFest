@@ -1,25 +1,24 @@
 .footer {
-  background-color: #EB0029;
-  width: 100vw;
-  height: 68px;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 0;
-  position: fixed;
+    background-color: #EB0029;
+    width: 100vw;
+    height: 6%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    position: fixed;
 }
 
-
 .footer p {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 100%;
-  line-height: 24px;
-  display: flex;
-  align-items: flex-end;
-  text-indent: 2px;
-  color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    line-height: 24px;
+    display: flex;
+    align-items: flex-end;
+    text-indent: 2px;
+    color: #FFFFFF;
 }
