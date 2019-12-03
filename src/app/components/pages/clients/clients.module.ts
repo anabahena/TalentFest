@@ -13,7 +13,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [ClientsComponent ],
+  declarations: [ClientsComponent],
   imports: [
     CommonModule,
     ClientsRoutingModule,
