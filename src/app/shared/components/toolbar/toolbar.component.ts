@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {LoginService} from '../../../components/auth/login.service';
 
 
+
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
@@ -9,7 +10,7 @@ import {LoginService} from '../../../components/auth/login.service';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor(public loginSvc:LoginService) { }
+  constructor(public loginSvc: LoginService) { }
 
   ngOnInit() {
   }

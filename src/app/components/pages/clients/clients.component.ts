@@ -57,19 +57,20 @@ export class ClientsComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
 
-  
-  // public client$ :Observable <ClientsI>;
-  
 
-  
-  constructor(private route:ActivatedRoute, private clientSvc: ClientsService) { }
+  // public client$ :Observable <ClientsI>;
+
+
+
+  constructor(private route: ActivatedRoute, private clientSvc: ClientsService) { }
 
   ngOnInit() {
-    this.clientSvc.getAllClients().subscribe(clients => this.dataSource.data = clients)
+
+    this.clientSvc.getAllClients().subscribe(clients => this.dataSource.data = clients);
 
 
   }
-  
+
   ngAfterViewInit(){
     this.dataSource.paginator=this.paginator;
     this.dataSource.sort = this.sort;
@@ -77,7 +78,7 @@ export class ClientsComponent implements OnInit, AfterViewInit {
 
   // onEditClient(client:ClientsI){
   //   console.log('Se ha editado', client);
-    
+
   // }
 
   // onDeleteClient(client:ClientsI){
@@ -85,7 +86,7 @@ export class ClientsComponent implements OnInit, AfterViewInit {
   // }
 
 
-  
+
 
 }
 
