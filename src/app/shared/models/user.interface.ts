@@ -1,6 +1,7 @@
 export interface Roles{
-    editor?:boolean;
-    admin?:boolean;
+    cobranza?:boolean;
+    marketing?:boolean;
+    atenClientes?: boolean;
 }
 
 export interface UserI{
@@ -8,5 +9,6 @@ export interface UserI{
     password:string;
     uid:any;
     roles:Roles;
-
 }
+
+

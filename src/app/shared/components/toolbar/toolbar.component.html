@@ -15,7 +15,7 @@
                 <a class="nav-link" routerLink="/admin" routerLinkActivate='active' *ngIf="loginSvc.userData | async">Estadísticas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/clients" routerLinkActivate='active' *ngIf="loginSvc.userData | async">clientes</a>
+                <a class="nav-link" routerLink="/clients" routerLinkActivate='active' *ngIf="loginSvc.userData | async">Clientes</a>
             </li>
             <li>
                 <a class="nav-link d-flex justify-content-center" *ngIf="loginSvc.userData | async; showLogin" (click)="onLogout()" routerLink="/login" routerLinkActivate='active'>Cerrar Sesión</a>
