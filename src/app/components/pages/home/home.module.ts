@@ -4,7 +4,10 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { MatTableModule } from '@angular/material';
 import {ClientsComponent} from '../clients/clients.component';
-import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatFormFieldModule, MatInputModule, MatSortModule } from '@angular/material';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [HomeComponent, ClientsComponent],
@@ -13,7 +16,11 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
     HomeRoutingModule,
     MatTableModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MatCheckboxModule,
+    MatIconModule
   ],
   exports:[HomeComponent],
 })

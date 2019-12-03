@@ -7,18 +7,21 @@ import { ClientsComponent } from './clients.component';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import {MatTableDataSource} from '@angular/material/table';
 import { MatTableModule } from '@angular/material';
-
-// 
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
-  declarations: [ClientsComponent,MatTableDataSource],
+  declarations: [ClientsComponent,MatTableDataSource ],
   imports: [
     CommonModule,
     ClientsRoutingModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule
-
+    MatTableModule,
+    MatPaginatorModule,
+    MatCheckboxModule,
+    MatIconModule
   ]
 })
 export class ClientsModule {

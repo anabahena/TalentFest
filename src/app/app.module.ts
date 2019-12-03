@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -22,16 +22,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import {MatTableDataSource} from '@angular/material/table';
 // import {MatTableModule} from '@angular/material/table';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
-import { MatTableModule } from '@angular/material' 
-
+import { MatTableModule } from '@angular/material';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/'
+// import {SelectionModel} from '@angular/cdk/collections';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     ContainerAppComponent,
-
-    
   ],
   imports: [
     BrowserModule,
@@ -46,8 +48,13 @@ import { MatTableModule } from '@angular/material'
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatCheckboxModule,
+    MatIconModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
