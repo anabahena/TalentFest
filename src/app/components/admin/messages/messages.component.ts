@@ -8,12 +8,14 @@ import { MessageService } from '../../../services/message.service'
 })
 export class MessagesComponent implements OnInit {
 
+  messages = [];
+
   constructor(public messageService: MessageService ) { }
 
   ngOnInit() {
     this.messageService.getMessages().subscribe(messages => {
-      console.log(messages)      
+      this.messages = messages;
+      // console.log(messages)      
     })
   }
-
 }

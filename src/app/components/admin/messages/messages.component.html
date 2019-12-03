@@ -1,1 +1,12 @@
-<p>messages works!</p>
+<div *ngIf="messages.length > 0; else nomessages">
+    <ul>
+        <li *ngFor="let m of messages">
+            {{m.area}} <br/>
+            {{m.text}}
+        </li>
+    </ul>
+</div>
+
+<ng-template #nomessages>
+    <p>No hay mensajes disponibles</p>
+</ng-template>
