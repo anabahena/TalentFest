@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "talentfestteambanorte": {
+      "hosting": {
+        "reto-Banorte": [
+          "talentfestteambanorte"
+        ]
+      }
+    }
+  }
+}
