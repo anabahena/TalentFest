@@ -31,6 +31,11 @@ export class MessageService {
      return this. messages;
    }
 
+  //  Metodo para agregar un mensaje a la colección
+   addMessage(message: Message){
+    this.messagesCollection.add(message);
+   }
+
    deleteMessage(message: Message) {
     this.messageDoc = this.db.doc(`messages/${message.id}`);
     this.messageDoc.delete();

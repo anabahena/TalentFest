@@ -1,5 +1,13 @@
 table {
-    width: 100%;
+    width: 65vw;
+    height: 65vh;
     background: #E77E7F;
-    /* text-align: center; */
+    text-align: center;
+}
+
+td.mat-cell,
+td.mat-footer-cell,
+th.mat-header-cell {
+    text-align: center;
+    font-size: 1.1rem;
 }

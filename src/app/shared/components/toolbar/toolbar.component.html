@@ -8,17 +8,18 @@
             <li class="nav-item">
                 <a class="nav-link" routerLink="/login" routerLinkActivate='active'><img src="assets/img/logoHeader.png" alt="Logotipo" class="logoHeader"></a>
             </li>
-          <li class="nav-item active">
+            <!-- <li class="nav-item active">
             <a class="nav-link" routerLink="/home" routerLinkActivate='active' *ngIf="loginSvc.userData | async">CENTRO DE ENVÍO</a>
-          </li>
+          </li> -->
             <li class="nav-item active">
-                <a class="nav-link" routerLink="/clients" routerLinkActivate='active' *ngIf="loginSvc.userData | async">PANEL DE CONTROL</a>
+                <!-- <a class="nav-link" routerLink="/clients" routerLinkActivate='active' *ngIf="loginSvc.userData | async">PANEL DE CONTROL</a> -->
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" routerLink="/admin" routerLinkActivate='active' *ngIf="loginSvc.userData | async">ESTADÍSTICAS</a>
-            </li>
+            </li> -->
             <li class="nav-item">
-                <a class="nav-link" routerLink="/admin" routerLinkActivate='active' *ngIf="loginSvc.userData | async">MENSAJES</a>
+<!--                <a class="nav-link" routerLink="/admin" routerLinkActivate='active' *ngIf="loginSvc.userData | async">MENSAJES</a>-->
+                <a class="nav-link" routerLink="/admin" routerLinkActivate='active' *ngIf="loginSvc.userData | async">MENSAJES (ATENCIÓN A CLIENTES)</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink="/clients" routerLinkActivate='active' *ngIf="loginSvc.userData | async">CLIENTES</a>

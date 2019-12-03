@@ -1,0 +1,50 @@
+div {
+    width: 70vw;
+    margin: 0;
+    padding: 0;
+}
+
+div ul li {
+    list-style: none;
+}
+
+div ul li button {
+    background: red;
+}
+table {
+  background: #F5F5F5;
+  display: flex;
+  justify-content: center;
+}
+.table-msg {
+    width: 60vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    border: 1px solid #4E4044;
+    text-align: justify;
+}
+
+.btn-delete {
+    width: 40vw;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.asunto {
+    /*font-weight: bold;*/
+    font-size: 1.4rem;
+    border-bottom: 1px solid #4E4044;
+    color: #4E4044;
+    text-align: center;
+}
+
+.texto {
+    font-size: 1.2rem;
+    text-align: justify;
+    padding: 2%;
+}
+
+
+/*table {*/
+/*  width: 100%;*/
+/*}*/
