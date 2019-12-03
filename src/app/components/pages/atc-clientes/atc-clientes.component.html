@@ -2,6 +2,8 @@
     <p>Buscar</p> <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
 </mat-form-field>
 
+<h1>Clientes (Centro de comunicación)</h1>
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
 
     <ng-container matColumnDef="select">
