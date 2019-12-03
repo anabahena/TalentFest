@@ -18,10 +18,10 @@
                 <a class="nav-link" routerLink="/admin" routerLinkActivate='active' *ngIf="loginSvc.userData | async">ESTADÍSTICAS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/admin" routerLinkActivate='active' *ngIf="loginSvc.userData | async">Mensajes</a>
+                <a class="nav-link" routerLink="/admin" routerLinkActivate='active' *ngIf="loginSvc.userData | async">MENSAJES</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/clients" routerLinkActivate='active' *ngIf="loginSvc.userData | async">Clientes</a>
+                <a class="nav-link" routerLink="/clients" routerLinkActivate='active' *ngIf="loginSvc.userData | async">CLIENTES</a>
             </li>
             <li>
                 <a class="nav-link d-flex justify-content-center" *ngIf="loginSvc.userData | async; showLogin" (click)="onLogout()" routerLink="/login" routerLinkActivate='active'>CERRAR SESIÓN</a>
