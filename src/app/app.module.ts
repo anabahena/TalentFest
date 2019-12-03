@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import {HomeComponent} from './components/pages/home/home.component'
 // import { from } from 'rxjs';
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 // Firebase
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -32,6 +33,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {isBoolean} from 'util';
 import {MatMenuModule} from '@angular/material/menu';
 import {FooterModule} from './shared/components/footer/footer.module';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {SelectionModel} from '@angular/cdk/collections'
 
 
 @NgModule({
@@ -42,6 +45,7 @@ import {FooterModule} from './shared/components/footer/footer.module';
   ],
   imports: [
     BrowserModule,
+    MatGridListModule,
     // MaterialModule.forRoot(),
     AppRoutingModule,
     MatMenuModule,
@@ -51,6 +55,8 @@ import {FooterModule} from './shared/components/footer/footer.module';
     AngularFireAuthModule,
     ReactiveFormsModule,
     CommonModule,
+    FormsModule,
+    FlexLayoutModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
