@@ -14,6 +14,6 @@ export interface ClientsI{
     rating:number,
     uid?:string,
     roles:Roles,
-    moroso:boolean
+    Moroso:boolean
 }
 
