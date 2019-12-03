@@ -29,11 +29,11 @@ export class LoginComponent implements OnInit {
     .loginEmail(form)
     .then(res =>{
       alert('Inicio de sesión exitoso');
-      this.route.navigate(['/home']);
+      this.route.navigate(['/clients']);
       
     })
     .catch(err =>{
-      alert('No has ingresado la información correcta');
+      // alert('No has ingresado la información correcta');
       this.route.navigate(['/login'])
     })
   }

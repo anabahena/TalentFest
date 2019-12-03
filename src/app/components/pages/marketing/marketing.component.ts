@@ -72,7 +72,7 @@ export class MarketingComponent implements OnInit, AfterViewInit {
   ngOnInit() {
 
     this.clientSvc.getAllClients().subscribe(clients => 
-      this.dataSource.data = clients.filter((item) => item.rating > 6)
+      this.dataSource.data = clients.filter((item) => item.rating > 7 && item.Moroso === false)
       );
   }
   
