@@ -11,7 +11,12 @@ import { ClientsI } from 'src/app/shared/models/clients.intrface';
 import {LoginService} from '../../auth/login.service';
 // import {AngularFireAuth} from '@angular/fire/auth';
 // import {UserI} from '../../../shared/models/user.interface'
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
+export interface Food {
+  value: string;
+  viewValue: string;
+}
 
 
 
@@ -27,6 +32,9 @@ export class ClientsComponent implements OnInit, AfterViewInit {
   dataSource = new MatTableDataSource();
   selection = new SelectionModel(true, []);
   User: any;
+
+  seleccionado = 'opción2' ;
+
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();

@@ -1,4 +1,20 @@
 <mat-form-field>
+    <mat-label> Seleccione una opción </mat-label>
+    <mat-select [( value )]="selected">
+        <mat-option> Ninguno </ mat-option>
+            <mat- option value="option1"> Opción 1 </mat-option>
+        <mat-option value="option2"> Opción 2 </mat-option>
+        <valor de la opción mat="option3"> Opción 3 </mat-option>
+    </mat-select>
+</mat-form-field>
+
+<p> Seleccionó: {{selected}} </p>
+
+
+
+
+
+<mat-form-field>
     <p>Buscar</p> <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
 </mat-form-field>
 
