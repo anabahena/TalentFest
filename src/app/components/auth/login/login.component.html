@@ -1,16 +1,33 @@
-<form [formGroup]="loginForm" (ngSubmit)=onLogin(loginForm.value)>
-    <div class="form-group ">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <div fxLayout = "column"  fxLayoutAlign = "center center" class="homeLogin">
+      <div fxLayout = "row"  fxLayoutAlign = "center center" class="title">
+        <h1>CENTRALIA</h1>
+      </div>
+      <div fxLayout = "row"  fxLayoutAlign = "center center">
+        <h3>La central de la comunicación.</h3>
+      </div>
+
+      <div fxLayout = "row"  fxLayoutAlign = "center center " class="formContainer" >
+        <div fxLayout = "col" fxLayoutAlign = "start start">
+          <img  src="assets/img/logoHeader.png">
+        </div>
+        <div class="login" fxLayout = "col" fxLayoutAlign = "end end" class="form">
+          <form [formGroup]="loginForm" (ngSubmit)=onLogin(loginForm.value)>
+            <div class="form-group ">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div>
+              <label for="exampleInputPassword1" type="password">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
     </div>
-    <div>
-        <label for="exampleInputPassword1" type="password">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
-    </div>
-    <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+    <div fxLayout = "row"  fxLayoutAlign = "center center" class="homeFooter"></div>
