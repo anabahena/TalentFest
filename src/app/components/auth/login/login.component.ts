@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     this.loginSvc
     .loginEmail(form)
     .then(res =>{
-      alert('Inicio de sesión exitoso');
+      // alert('Inicio de sesión exitoso');
       this.route.navigate(['/clients']);
       
     })

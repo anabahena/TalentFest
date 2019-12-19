@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {UserI} from '../../shared/models/user.interface';
 import {AngularFireAuth} from '@angular/fire/auth';
-import {Observable, merge} from 'rxjs';
+import {Observable} from 'rxjs';
 import {AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
 // import {BehaviorSubject} from 'rxjs/BehaviorSubject';
@@ -13,6 +13,7 @@ import { map } from 'rxjs/operators';
 })
 export class LoginService {
   public userData: Observable <firebase.User>;
+  
   constructor(private afsAuth: AngularFireAuth, private afs: AngularFirestore) {
     this.userData = afsAuth.authState;
    }
@@ -23,9 +24,14 @@ export class LoginService {
   loginEmail(user: UserI){
     const {email, password} = user;
     return this.afsAuth.auth.signInWithEmailAndPassword(email, password)
-    .then((credential) =>{
-      this.updateUserData(credential.user);
-    });
+    .then( res =>{
+      console.log('usuario logeado', res);
+      
+    })
+    .catch(err =>{
+      console.log('inicio de sesión no realizado', err);
+      
+    })
 
   }
 
@@ -34,25 +40,28 @@ export class LoginService {
     this.afsAuth.auth.signOut();
   }
 
-
+// Función para detectar si es usuario
   isAdmin(userUid){
     return this.afs.doc<UserI>(`users/${userUid}`).valueChanges;
   }
 
-  isAuth(){
-    return this.afsAuth.authState.pipe(map(auth => auth));
-  }
 
-  private updateUserData(user){
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
-    const data: UserI = {
-      uid: user.uid,
-      email: user.email,
-      password: user.password,
-      roles: {
-        cobranza: true
-      }
-    };
-    return userRef.set(data, {merge: true});
-  }
+// Autenticación
+//   isAuth(){
+//     return this.afsAuth.authState.pipe(map(auth => auth));
+//   }
+
+//   private updateUserData(user){
+//     const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
+//     const data: UserI = {
+//       // uid: user.uid,
+//       email: user.email,
+//       password: user.password,
+//       // roles: {
+//       //   cobranza: true
+//       // }
+//     };
+//     return userRef.set(data, {merge: true});
+    
+//   }
 }
